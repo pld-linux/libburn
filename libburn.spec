@@ -1,12 +1,12 @@
 Summary:	Library for reading and writing optical discs
 Summary(pl):	Biblioteka s³u¿±ca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
-Version:	0.1
+Version:	0.2
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://icculus.org/burn/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	8c968ca4d8f9c071de6660ffe405b72b
+# Source0-md5:	fcf42dd1a5ed137b96a60e1cc2141d18
 URL:		http://icculus.org/burn/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
