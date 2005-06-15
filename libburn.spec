@@ -1,3 +1,4 @@
+%bcond_without	static	# don't build static library
 Summary:	Library for reading and writing optical discs
 Summary(pl):	Biblioteka s³u¿±ca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
@@ -8,6 +9,9 @@ Group:		Libraries
 Source0:	http://icculus.org/burn/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	fcf42dd1a5ed137b96a60e1cc2141d18
 URL:		http://icculus.org/burn/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,7 +50,12 @@ Statyczna biblioteka libburn.
 %setup -q
 
 %build
-%configure
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure \
+	%{!?with_static:--disable-static}
 %{__make}
 
 %install
@@ -73,6 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/%{name}
 %{_pkgconfigdir}/*.pc
 
+%if %{with static}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
