@@ -1,4 +1,6 @@
+# Conditional build:
 %bcond_without	static_libs	# don't build static library
+#
 Summary:	Library for reading and writing optical discs
 Summary(pl):	Biblioteka s³u¿±ca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
