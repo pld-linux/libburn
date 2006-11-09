@@ -28,7 +28,7 @@ zarz±dzania i zapisywania dysków optycznych.
 Summary:	Header files for libburn library
 Summary(pl):	Pliki nag³ówkowe biblioteki libburn
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libburn library.
@@ -40,7 +40,7 @@ Pliki nag³ówkowe biblioteki libburn.
 Summary:	Static libburn library
 Summary(pl):	Statyczna biblioteka libburn
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libburn library.
