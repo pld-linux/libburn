@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for reading and writing optical discs
-Summary(pl):	Biblioteka s³u¿±ca do odczytywania i zapisywania dysków optycznych
+Summary(pl.UTF-8):   Biblioteka sÅ‚uÅ¼Ä…ca do odczytywania i zapisywania dyskÃ³w optycznych
 Name:		libburn
 Version:	0.2
 Release:	1
@@ -20,32 +20,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Libburn is an open-source library for reading, mastering and writing
 optical discs.
 
-%description -l pl
-Libburn jest wolnodostêpn± bibliotek± s³u¿±c± do odczytywania,
-zarz±dzania i zapisywania dysków optycznych.
+%description -l pl.UTF-8
+Libburn jest wolnodostÄ™pnÄ… bibliotekÄ… sÅ‚uÅ¼Ä…cÄ… do odczytywania,
+zarzÄ…dzania i zapisywania dyskÃ³w optycznych.
 
 %package devel
 Summary:	Header files for libburn library
-Summary(pl):	Pliki nag³ówkowe biblioteki libburn
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libburn
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for libburn library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki libburn.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki libburn.
 
 %package static
 Summary:	Static libburn library
-Summary(pl):	Statyczna biblioteka libburn
+Summary(pl.UTF-8):   Statyczna biblioteka libburn
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libburn library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libburn.
 
 %prep
