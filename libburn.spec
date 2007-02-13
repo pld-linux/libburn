@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for reading and writing optical discs
-Summary(pl.UTF-8):   Biblioteka służąca do odczytywania i zapisywania dysków optycznych
+Summary(pl.UTF-8):	Biblioteka służąca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
 Version:	0.2
 Release:	1
@@ -26,7 +26,7 @@ zarządzania i zapisywania dysków optycznych.
 
 %package devel
 Summary:	Header files for libburn library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libburn
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libburn
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -38,7 +38,7 @@ Pliki nagłówkowe biblioteki libburn.
 
 %package static
 Summary:	Static libburn library
-Summary(pl.UTF-8):   Statyczna biblioteka libburn
+Summary(pl.UTF-8):	Statyczna biblioteka libburn
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
