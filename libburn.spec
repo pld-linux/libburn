@@ -5,14 +5,14 @@
 Summary:	Library for reading and writing optical discs
 Summary(pl.UTF-8):	Biblioteka służąca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
-Version:	0.2
+Version:	0.3.8
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Libraries
-Source0:	http://icculus.org/burn/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	fcf42dd1a5ed137b96a60e1cc2141d18
-URL:		http://icculus.org/burn/
-BuildRequires:	autoconf
+Source0:	http://files.libburnia-project.org/releases/%{name}-%{version}.tar.gz
+# Source0-md5:	c3a1e7cdb7c5aec3bba0f2cb249ba16c
+URL:		http://libburnia.pykix.org/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -75,18 +75,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%doc AUTHORS CONTRIBUTORS COPYRIGHT README
+%attr(755,root,root) %{_bindir}/cdrskin
+%attr(755,root,root) %{_libdir}/libburn.so.*.*.*
+%{_mandir}/man1/cdrskin.1*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/%{name}
-%{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/libburn.so
+%{_libdir}/libburn.la
+%{_includedir}/libburn
+%{_pkgconfigdir}/libburn-1.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libburn.a
 %endif
