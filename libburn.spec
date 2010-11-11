@@ -75,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS CONTRIBUTORS COPYRIGHT README
+%doc AUTHORS CONTRIBUTORS COPYRIGHT ChangeLog README
 %attr(755,root,root) %{_bindir}/cdrskin
 %attr(755,root,root) %{_libdir}/libburn.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libburn.so.4
