@@ -5,12 +5,12 @@
 Summary:	Library for reading and writing optical discs
 Summary(pl.UTF-8):	Biblioteka służąca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
-Version:	0.8.8.pl00
+Version:	0.9.0.pl00
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://files.libburnia-project.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	4a05e8501a013d74cb9078bff7b5ad75
+# Source0-md5:	ad77dea9e6878b25e0ae52981c888bc5
 URL:		http://libburnia.pykix.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -50,7 +50,7 @@ Static libburn library.
 Statyczna biblioteka libburn.
 
 %prep
-%setup -q -n %{name}-0.8.8
+%setup -q -n %{name}-0.9.0
 
 %build
 %{__libtoolize}
