@@ -5,13 +5,13 @@
 Summary:	Library for reading and writing optical discs
 Summary(pl.UTF-8):	Biblioteka służąca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
-Version:	1.5.2
+Version:	1.5.4
 Release:	1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://files.libburnia-project.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	096f4acfba00f1210a84fb7650f7693d
-URL:		http://libburnia-project.org/
+Source0:	https://files.libburnia-project.org/releases/%{name}-%{version}.tar.gz
+# Source0-md5:	454d03ce31addb5b7dca62d213c9660e
+URL:		https://dev.lovelyhq.com/libburnia/web/wiki
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
