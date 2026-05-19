@@ -1,16 +1,16 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static library
+%bcond_without	static_libs	# static library
 #
 Summary:	Library for reading and writing optical discs
 Summary(pl.UTF-8):	Biblioteka służąca do odczytywania i zapisywania dysków optycznych
 Name:		libburn
-Version:	1.5.6
+Version:	1.5.8
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	https://files.libburnia-project.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	cf9852f3b71dbc2b6c9e76f6eb0474f0
+# Source0-md5:	4c8c786e88eb3e9f7c1d0ddc4d4a39e7
 URL:		https://dev.lovelyhq.com/libburnia/web/wiki
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -68,6 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libburn.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -78,14 +81,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS CONTRIBUTORS COPYRIGHT ChangeLog README
 %attr(755,root,root) %{_bindir}/cdrskin
-%attr(755,root,root) %{_libdir}/libburn.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libburn.so.4
+%{_libdir}/libburn.so.*.*.*
+%ghost %{_libdir}/libburn.so.4
 %{_mandir}/man1/cdrskin.1*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libburn.so
-%{_libdir}/libburn.la
+%{_libdir}/libburn.so
 %{_includedir}/libburn
 %{_pkgconfigdir}/libburn-1.pc
 
